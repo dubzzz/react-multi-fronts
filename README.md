@@ -1,5 +1,7 @@
 # Proof-Of-Concept: React app spread accross multiple apps (separate releases)
 
+## In a nutshell
+
 **1- Setup initial apps**
 
 ```sh
@@ -34,3 +36,26 @@ Check the following files:
 
 - rollup.config.js
 - tsconfig.lib.json
+
+## Run it
+
+In a first terminal:
+
+```
+cd app-main
+yarn && yarn start
+```
+
+In a second terminal:
+
+```
+cd app-team-a
+yarn && yarn build:dist && yarn serve
+```
+
+In a third terminal:
+
+```
+cd app-team-b
+yarn && yarn build:dist && yarn serve
+```
