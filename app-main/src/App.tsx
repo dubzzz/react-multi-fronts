@@ -2,7 +2,7 @@ import React from "react";
 
 const AppTeamA = React.lazy(() =>
   //@ts-ignore
-  import(/* webPackIgnore: true */ "http://localhost:10001/App.js")
+  import(/* webpackIgnore: true */ "http://localhost:10001/App.js")
 );
 
 const App: React.FC = () => {

@@ -16,7 +16,7 @@ In order to do so, we are just relying on pure JavaScript code and disabling som
 // import the module corresponding to the app of Team A
 const AppTeamA = React.lazy(() =>
   //@ts-ignore
-  import(/* webPackIgnore: true */ "http://localhost:10001/App.js")
+  import(/* webpackIgnore: true */ "http://localhost:10001/App.js")
 );
 
 // use it into our main app
