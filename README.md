@@ -16,7 +16,7 @@ In order to do so, we are just relying on pure JavaScript code and disabling som
 // import the module corresponding to the app of Team A
 const AppTeamA = React.lazy(() =>
   //@ts-ignore
-  import(/* webpackIgnore: true */ "http://localhost:10001/App.js")
+  import(/* webpackIgnore: true */ "http://localhost:10001/bundle.js")
 );
 
 // use it into our main app
@@ -27,3 +27,10 @@ render() {
     </React.Suspense>;
 }
 ```
+
+**3- Bundle team A and team B work**
+
+Check the following files:
+
+- rollup.config.js
+- tsconfig.lib.json
