@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+const AppTeamA = React.lazy(() =>
+  //@ts-ignore
+  import(/* webPackIgnore: true */ "http://localhost:10001/App.js")
+);
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <React.Suspense fallback={<div>Loading App A...</div>}>
+        <AppTeamA />
+      </React.Suspense>
     </div>
   );
-}
+};
 
 export default App;
